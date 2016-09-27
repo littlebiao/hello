@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type = "text/javascript">
+
+	var worker = new Worker("workerp.js");
+	worker.postMessage({"a":123,"b":456});
+	worker.onmessage = function(mes){
+		console.log(mes.data)
+	}
+</script>
+</head>
+</html>
